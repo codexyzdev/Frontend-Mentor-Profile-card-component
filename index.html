@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <title>Frontend Mentor | Profile card component</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap");
+      :root {
+        --Darkcyan: hsl(185, 75%, 39%);
+        --DarkGrayishBlue: hsl(227, 10%, 46%);
+        --DarkGray: hsl(0, 0%, 59%);
+        --VeryDarkDesaturatedBlue: hsl(229, 23%, 23%);
+      }
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        font-family: "Kumbh Sans", sans-serif;
+        background-color: var(--Darkcyan);
+        background-image: url("/images/bg-pattern-top.svg");
+        background-repeat: no-repeat;
+        background-position: -750px -500px;
+        position: relative;
+      }
+      body::after {
+        content: "";
+        background-image: url("/images/bg-pattern-bottom.svg");
+        position: absolute;
+        width: 978px;
+        height: 978px;
+        background-repeat: no-repeat;
+        background-position: 750px 500px;
+        bottom: 0;
+        right: 0;
+        z-index: -1;
+      }
+
+      main {
+        display: grid;
+        place-content: center;
+        min-height: 100dvh;
+      }
+      img {
+        max-width: 100%;
+      }
+
+      .card {
+        min-width: 350px;
+        background-color: #fff;
+        background-image: url("/images/bg-pattern-card.svg");
+        background-repeat: no-repeat;
+        border-radius: 1em;
+        text-align: center;
+        & .card__avatar {
+          border-radius: 100%;
+          display: block;
+          margin: 5.5em auto 0;
+          border: 3px solid #fff;
+        }
+        & .card__name {
+          font-weight: 700;
+          margin-top: 1em;
+          margin-bottom: 0.5em;
+          color: var(--VeryDarkDesaturatedBlue);
+          & span {
+            font-weight: 400;
+            color: var(--DarkGrayishBlue);
+          }
+        }
+        & .card__location {
+          font-weight: 400;
+          color: var(--DarkGrayishBlue);
+          margin-bottom: 1.5em;
+        }
+        & .hr {
+          background-color: var(--DarkGrayishBlue);
+          width: 100%;
+          height: 1px;
+          opacity: 50%;
+        }
+        & ul {
+          list-style: none;
+          display: flex;
+          justify-content: space-between;
+          padding: 2em;
+          & li {
+            display: flex;
+            flex-direction: column;
+            & span:first-child {
+              font-weight: 700;
+              color: var(--VeryDarkDesaturatedBlue);
+              font-size: 1.5em;
+            }
+            & span:last-child {
+              font-weight: 400;
+              color: var(--DarkGrayishBlue);
+              font-size: 0.8em;
+            }
+          }
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="card">
+        <img
+          class="card__avatar"
+          src="/images/image-victor.jpg"
+          alt="image-victor"
+        />
+        <h2 class="card__name">Victor Crest <span>26</span></h2>
+        <p class="card__location">London</p>
+        <div class="hr"></div>
+        <ul>
+          <li>
+            <span>80k</span>
+            <span>Followers</span>
+          </li>
+          <li>
+            <span>803k</span>
+            <span>Likes</span>
+          </li>
+          <li>
+            <span>1.4k</span>
+            <span>Photos</span>
+          </li>
+        </ul>
+      </div>
+    </main>
+  </body>
+</html>
