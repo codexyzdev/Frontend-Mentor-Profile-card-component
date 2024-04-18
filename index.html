@@ -53,7 +53,7 @@
       }
 
       .card {
-        min-width: 350px;
+        width: 350px;
         background-color: #fff;
         background-image: url("/images/bg-pattern-card.svg");
         background-repeat: no-repeat;
@@ -105,6 +105,20 @@
               font-size: 0.8em;
             }
           }
+        }
+      }
+      @media screen and (max-width: 360px) {
+        .card {
+          width: 320px;
+        }
+      }
+
+      @media screen and (min-width: 1068px) {
+        body {
+          background-position: -270px -500px;
+        }
+        body::after {
+          background-position: 270px 500px;
         }
       }
     </style>
